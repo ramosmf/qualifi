@@ -1,0 +1,328 @@
+\documentclass[a4paper,11pt]{report}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% University of Sussex thesis template
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Modification History
+%
+% Based on usthesis.cls by Jonathon Read
+% http://www.cogs.susx.ac.uk/users/jlr24/latex.html
+% Modified by Anthony Smith, Feb 2007
+% Incorporated into single thesis.tex file, Anthony Smith, 30 June 2008
+% Minor alterations to page numbering, AJS, 25 July 2008
+% New alternative hyperref options for print version, AJS, 11 Sep 2008
+% "DRAFT" on header, AJS, 12 Sep 2008
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% LINE SPACING
+\newcommand{\linespacing}{1.5}
+\renewcommand{\baselinestretch}{\linespacing}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% BIBLIOGRAPHY STYLE
+% \usepackage{natbib}
+% \bibliographystyle{plain} for [1], [2] etc.
+% \bibliographystyle{apalike}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% OTHER FORMATTING/LAYOUT DECLARATIONS
+% Graphics
+\usepackage{graphicx,color}
+\usepackage{epstopdf}
+\usepackage[brazil]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{ae} 
+\usepackage[ansinew]{inputenc} 
+% Some packages used in my master's thesis
+\usepackage{indentfirst}
+% The left-hand-side should be 40mm.  The top and bottom margins should be
+% 25mm deep.  The right hand margin should be 20mm.
+\usepackage[a4paper,top=2.5cm,bottom=2.5cm,left=3cm,right=3cm,headsep=10pt]{geometry}
+\flushbottom
+% Pages should be numbered consecutively thorugh the main text.  Page numbers
+% should be located centrally at the top of the page.
+\usepackage{fancyhdr}
+%\fancypagestyle{plain}{
+	% \fancyhf{}
+	% Add "DRAFT: <today's date>" to header (comment out the following to remove)
+	% \lhead{\textit{DRAFT: \today}}
+	%
+	% \chead{\thepage}
+	% \renewcommand{\headrulewidth}{0pt}
+%}
+\pagestyle{plain}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ANY OTHER DECLARATIONS HERE:
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% HYPERREF
+\usepackage[colorlinks,pdfusetitle,urlcolor=blue,citecolor=blue,linkcolor=blue,bookmarksnumbered,plainpages=false]{hyperref}
+% For print version, use this instead:
+%\usepackage[pdfusetitle,bookmarksnumbered,plainpages=false]{hyperref}
+%\usepackage{backref}
+%\renewcommand{\backrefpagesname}{Cited on}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% BEGIN DOCUMENT
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PREAMBLE: roman page numbering i, ii, iii, ...
+\pagenumbering{roman}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% TITLE PAGE: The title page should give the following information:
+%%	(i) the full title of the thesis and the sub-title if any;
+%%	(ii) the full name of the author;
+%%	(iii) the qualification aimed for;
+%%	(iv) the name of the University of Sussex;
+%%	(v) the month and year of submission.
+\thispagestyle{empty}
+\begin{flushright}
+\includegraphics[width=3cm]{puclogo}
+\end{flushright}	
+\vskip40mm
+\begin{center}
+% TITLE FENOMENOS DE PROPAGACAO EM REDES COMPLEXAS?
+
+\huge\textbf{Exame de Qualifica\c{c}\~ao}
+\vskip2mm
+% SUBTITLE (optional)
+\LARGE\textit{Fen\^omenos de Propaga\c{c}\~ao em Redes Complexas}
+\vskip5mm
+% AUTHOR
+\Large\textbf{Aluno: Marlon Ramos}\\
+\Large\textbf{Orientadora: Celia Anteneodo}
+\normalsize
+\end{center}
+\vfill
+\begin{flushleft}
+\large
+% QUALIFICATION
+Departamento de F\'isica\\
+Pontif\'icia Universidade Cat\'olica do Rio de Janeiro\\
+% DATE OF SUBMISSION
+Junho 2012
+\end{flushleft}		
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SUMMARY PAGE
+\thispagestyle{empty}
+\newpage
+\null\vskip10mm
+\begin{center}
+\large
+\underline{Pontif\'icia Universidade Cat\'olica do Rio de Janeiro}
+\vskip20mm
+% AUTHOR, QUALIFICATION
+\textsc{Marlon Ramos}
+\vskip20mm
+% TITLE
+\underline{\textsc{Exame de Qualifica\c{c}\~ao}}
+\vskip0mm
+% SUBTITLE (optional)
+\underline{\textsc{Fen\^omenos de Propaga\c{c}\~ao em Redes Complexas}}
+\vskip20mm
+\underline{\textsc{Resumo}}
+\vskip2mm
+\end{center}
+% Change line spacing
+\renewcommand{\baselinestretch}{1.0}
+\small\normalsize
+% SUMMARY HERE (300 word limit for most subjects):
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ACKNOWLEDGEMENTS
+% \chapter*{Agradecimentos}
+% \renewcommand{\baselinestretch}{\linespacing}
+% \small\normalsize
+% ACKNOWLEDGEMENTS HERE:
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TABLE OF CONTENTS, LISTS OF TABLES & FIGURES
+\newpage
+\pdfbookmark[0]{Contents}{contents_bookmark}
+\tableofcontents
+%\listoftables
+%\phantomsection
+%\addcontentsline{toc}{chapter}{List of Tables}
+%\listoffigures
+%\phantomsection
+%\addcontentsline{toc}{chapter}{List of Figures}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% MAIN THESIS TEXT: arabic page numbering 1, 2, 3, ...
+\newpage
+\pagenumbering{arabic}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%-----------------------------------------------------
+% Chapter: Introducao e Metologia
+%-----------------------------------------------------
+
+
+\chapter{Introdu\c{c}\~ao e Metodologia}
+\label{chap:intro}
+
+\section{Introdu\c{c}\~ao e Motiva\c{c}\~ao}
+
+CONTAGIO: (biologia e sociologia)  keywords PRx rumor+spreading
+
+FOCO: fenomenos de propagacao em meios sociais: 
+
+-difusao de rumores, informacoes
+
+-surgimento de consenso na adopcao de inovacoes tecnologicas, 
+ formacao de opinioes, da linguagem, diseminacao de ideias, 
+da corrupcao, praticas sociais, etc.
+
+-epidemias de doencas infecciosas 
+
+diversos fenomenos governados por interacoes sociais
+que podem evoluir para estados finais fragmentados desordenados 
+ou de consenso, em que todos os individuos sao atingidos por 
+informacoes ou doencas (consenso de opinioes, epidemias, 
+respectivamente) ou adoptam um mesmo padrao comportamental 
+(opiniao, linguagem) \cite{BOCCALETTI:2006gb}
+
+a pergunta fundamental eh como esses estados estacionarios emergem, 
+quais os mecanismos e como exercer controle sobre os mesmos
+
+
+a topologia da rede em que as interacoes ocorrem tambem eh 
+crucial para determinar as propriedades emergentes 
+
+\section{Metologia} 
+
+analogia com problemas de fisica estatistica, tr. de fase, percolacao, difusao, etc
+
+fisica est: analogia com sistemas fisicos (magneticos tipo Ising, 1/2 ou 1)
+
+uso de redes complexas
+
+%-----------------------------------------------------
+% Chapter: Modelos
+%-----------------------------------------------------
+\chapter{Revis\~ao Bibliogr\'afica}
+\label{chap:models}
+
+\section{Modelos}
+-Individuos atingidos por rumores ou noticias <> analogo infecao doencas
+(informados = infectados, porem: um eh intencional o outro involuntario, 
+vantagem vs desvantagem) 
+
+-as perguntas sao similares (numero de atingidos?, limiar de epidemia?, 
+fracao finita vs entorno local), eg: viral strategies in marketting
+
+- os objetivos sao opostos
+- descrever em epidemias, inventar em informacoes
+
+- interacao assimetrica
+- fluxo unidireccional: vai de quem tem a info, doenca --> para quem nao tem 
+
+-varios dos modelos supoem um limiar na fracao do numero de vizinhos "ativos"
+porem em alguns casos um unico vizinho eh suficiente para iniciar o spreading
+
+- Modelo standard DK (Daley Kendall) 
+ignorants, spreaders, stifflers = S I R
+
+I--> R
+  k
+  k(I+R)
+\section{Redes Complexas}
+
+\section{Resultados pr\'evios}
+
+
+rumores: NO THRESHOLD FOR HOMOGENEOUS MIXING (for any rate a finite fraction will 
+be informed)\cite{Castellano:2009ce}
+
+Random, WS tem limiar epidemico, there is an epidemic transition \cite{Zanette:2001kh} 
+correlacoes mudam o limiar
+scale free NAO tem, epidemic threshold ou seja sempre tem epidemia
+
+REDES em evolucao 
+contact switching--> avoids spreading \cite{RisauGusman:2009jh}
+
+%-----------------------------------------------------
+% Chapter: Propostas e Conclus\~oes
+%-----------------------------------------------------
+\chapter{Propostas e Conclus\~oes}
+\label{chap:conc}
+
+- outros detalhes em modelos ja estudados
+alem das propriedades estacionarias, eh importante caracterizar 
+os transientes, quando leva em chegar no SS 
+
+- novos
+
+- difusao
+
+- rumores --> generalizacoes
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% BIBLIOGRAPHY
+%\newpage
+\clearpage
+\phantomsection
+\addcontentsline{toc}{chapter}{Refer\^encias Bibliogr\'aficas}
+\bibliography{bib}
+\bibliographystyle{unsrt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% START APPENDICES
+% \appendix
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%-----------------------------------------------------
+% Appendix: Code
+%-----------------------------------------------------
+%\chapter{Code}
+%\label{app:code}
+
+%Este phantom resolve o problema de que a Bibliografia n\~ao aparece no TOC
+\phantom{x}
+
+%\begin{verbatim}
+%10 PRINT "HELLO WORLD"
+%\end{verbatim}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% END DOCUMENT
+\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%

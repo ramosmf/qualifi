@@ -1,0 +1,142 @@
+ spreading phenomena in complex networks
+
+FENOMENOS DE PROPAGACAO EM REDES COMPLEXAS?
+
+
+
+INTRODUCAO
+
+
+
+CONTAGIO (biologia e sociologia)  keywords PRx rumor+spreading
+
+FOCO: fenomenos de propagacao em meios sociais: 
+
+-difusao de rumores, informacoes
+
+-surgimento de consenso na adopcao de inovacoes tecnologicas, 
+ formacao de opinioes, da linguagem, diseminacao de ideias, 
+da corrupcao, praticas sociais, etc.
+
+-epidemias de doencas infecciosas 
+
+diversos fenomenos governados por interacoes sociais
+que podem evoluir para estados finais fragmentados desordenados 
+ou de consenso, em que todos os individuos sao atingidos por 
+informacoes ou doencas (consenso de opinioes, epidemias, 
+respectivamente) ou adoptam um mesmo padrao comportamental 
+(opiniao, linguagem) 
+
+a pergunta fundamental eh como esses estados estacionarios emergem, 
+quais os mecanismos e como exercer controle sobre os mesmos
+
+
+a topologia da rede em que as interacoes ocorrem tambem eh 
+crucial para determinar as propriedades emergentes \cite
+
+
+
+secao METODOLOGIA
+
+analogia com problemas de fisica estatistica, tr. de fase, percolacao, difusao, etc
+
+fisica est: analogia com sistemas fisicos (magneticos tipo Ising, 1/2 ou 1)
+
+uso de redes complexas
+
+
+
+
+secao MODELOS
+
+-Individuos atingidos por rumores ou noticias <> analogo infecao doencas
+(informados = infectados, porem: um eh intencional o outro involuntario, 
+vantagem vs desvantagem) 
+
+-as perguntas sao similares (numero de atingidos?, limiar de epidemia?, 
+fracao finita vs entorno local), eg: viral strategies in marketting
+
+- os objetivos sao opostos
+- descrever em epidemias, inventar em informacoes
+
+- interacao assimetrica
+- fluxo unidireccional: vai de quem tem a info, doenca --> para quem nao tem 
+
+-varios dos modelos supoem um limiar na fracao do numero de vizinhos "ativos"
+porem em alguns casos um unico vizinho eh suficiente para iniciar o spreading
+\cite{Castellano}
+
+- Modelo standard DK (Daley Kendall) 
+ignorants, spreaders, stifflers = S I R
+
+I--> R
+  k
+  k(I+R)
+
+
+
+Secao REDES COMPLEXAS
+
+ 
+
+Secao Resultados previos
+
+rumores: NO THRESHOLD FOR HOMOGENEOUS MIXING (for any rate a finite fraction will 
+be informed)\cite{Castellano}
+
+Random, WS tem limiar epidemico, there is an epidemic transition \cite{zanette0} 
+correlacoes mudam o limiar
+scale free NAO tem, epidemic threshold ou seja sempre tem epidemia
+
+REDES em evolucao 
+contact switching--> avoids spreading \cite{zanette}
+
+
+Secao propostas
+
+
+- outros detalhes em modelos ja estudados
+alem das propriedades estacionarias, eh importante caracterizar 
+os transientes, quando leva em chegar no SS 
+
+- novos
+
+- difusao
+
+- rumores --> generalizacoes
+
+ 
+
+
+*****
+
+REFS
+
+
+\bibitem{latora}
+S. Boccalettia,*, V. Latorab,c, Y. Morenod,e, M. Chavezf , D.-U. Hwanga
+Physics Reports 424 (2006) 175 – 308,  (Pag 228)
+Complex networks: Structure and dynamics
+% Mudei para BOCCALETTI:2006gb
+ 
+
+\bibitem{Castellano}  Castellano, Rev. Mod. Phys. 2009, p634 
+% Mudei para Castellano:2009ce,
+
+\bibitem{zanette0}
+Zanette, D. H., 2001, Phys. Rev. E 64, 050901.
+Critical behavior of propagation in SW networks
+http://pre.aps.org/pdf/PRE/v64/i4/e050901
+%Mudei para Zanette:2001kh
+
+
+Zanette, D. H., 2002, Phys. Rev. E 65, 041908.
+Dynamics of rumor propagation on small-world networks 
+http://pre.aps.org/pdf/PRE/v65/i4/e041908
+%Mudei para Zanette:2002iu
+
+\bibitem{zanette} Journal of Theoretical Biology
+Volume 257, Issue 1, 7 March 2009, Pages 52–60
+Contact switching as a control strategy for epidemic outbreaks
+%Mudei para RisauGusman:2009jh
+
