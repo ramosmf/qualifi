@@ -1,0 +1,67 @@
+\documentclass[]{article}
+
+\begin{document}
+
+\title{Modelo de Daley-Kendall}
+\author{Marlon}
+\maketitle
+
+\section{Modelo de Daley-Kendall}
+
+Existe uma outra classe de f\^enomeno de espalhamento em uma rede social chamada de espalhamento de rumores.
+
+It is then clear that rumor spreading bears a lot of resemblance to the evolution of an epidemic, with informed people playing the role of infected agents and uninformed people that of susceptible ones.
+ 
+Como vimos nas se\c{c}\~oes anteriores, no estudo de epidemias queremos modelar a din\^amica de uma certa doen\c{c}a para eventualmente conseguir desenvolver estrat\'egias para controlar o avan\c{c}o da doen\c{c}a. No entanto, o objetivo \'e exatamente o oposto queremos que o rumor se espalhe o mais r\'apido poss\'ivel e atinja o maior n\'umero de pessoas. Algumas aplica\c{c}\~oes dos modelos de rumores s\~ao a dissemina\c{c}\~ao de protocolos para dissemina\c{c}\~ao de dados na internet e estrat\'egias em campanhas de marketing. Uma diferen\c{c}a entre essas duas classes, \'e que em modelos para o espalhamento de rumores temos a liberdade de criar as regras que melhor atentem os objetivos. 
+
+The standard rumor model is the so-called DK model. Recently, several authors [376,377,381,382] have explored this model and slight variations of it on top of complex topologies. The basic DK rumor model is defined as follows. Each of the N elements of the network can be in one of three possible states. Following the original terminology [378], these three classes correspond to ignorant (denoted by I), spreader (S) and stifler (R) nodes. Ignorants are those individuals who have not heard the rumor and hence they are susceptible to be informed. The second class comprises active individuals that are spreading the rumor. Finally, stiflers are those who know the rumor but that are no longer spreading it.
+
+In epidemiological models, the time evolution of the different classes is only determined by the dynamics of the individuals and does not depend on the state of their neighbors, except in the creation term, i.e., the interaction infected–susceptible. On the other hand, the rumor dynamics is driven by direct contacts between individuals of different classes. As we will see, this difference in the annihilation term is at the root of a quite different qualitative picture. The dynamics of the model, at each time step, is ruled by the following transitions:
+
+
+\begin{eqnarray}
+I(i)+S(j)\stackrel{\lambda}{\longrightarrow} S(i)+S(j)\\
+S(i)+S(j)\stackrel{\alpha}{\longrightarrow} R(i)+S(j)\\
+S(i)+R(j)\stackrel{\alpha}{\longrightarrow} R(i)+R(j)\\
+\end{eqnarray}
+
+where i and j are two neighbors. The spreading process evolves by contacts between spreaders and ignorants. When an ignorant meets a spreader, it turns itself into a new spreader at a rate $\lambda$. The decay of spreading may be due to a process of “forgetting”, or because spreaders learn that the rumor has lost its “news value”. In the equations above we have assumed this latter hypothesis as the most plausible so that spreaders become stiflers with probability $\alpha$ if they are in contact with another spreader or a stifler. As one is free to design the rumor in such a way that the fraction of the population which ultimately learns the rumor is the maximum possible, it is also assumed that contacts of the type spreader–spreader are directed, that is, only the contacting individual loses the interest in propagating the rumor further.
+
+Temos que tomar um certo cuidado com a nova defini\c{c}\~ao para n\~ao confundir com as usadas nos modelos anteriores. Vamos usar essa defini\c{c}\~ao porque \'e a nota\c{c}\~ao padr\~ao usada no modelo de Daley e Kendal.
+
+Na hip\'otese de mistura homog\^enea o modelo DK pode ser descrito usando a densidades de ignorantes $i(t)$, informantes $s(t)$ e contidos $r(t)$. As equa\c{c}\~oes de campo m\'edio s\~ao:
+
+\begin{eqnarray}
+\frac{di}{dt}&=&-\lambda i s \label{eq:ign-hmh}\\
+\frac{ds}{dt}&=&\lambda i s -\alpha s[s+r]\label{eq:spr-hmh} \\
+\frac{dr}{dt}&=&\alpha s[s+r] \label{eq:sti-hmh}
+\end{eqnarray}
+com as condi\c{c}\~oes iniciais $i(0)=(n-1)/n$, $s(0)=1/n$ e $r(0)=0$, onde $n$	\'e o n\'umero de indiv\'iduos na popula\c{c}\~ao. Temos tamb\'em a equa\c{c}\~ao de v\'inculo, 
+
+\begin{equation}
+s+r+i=1,
+\label{eq:DK-vin}
+\end{equation}
+que assume que a popula\c{c}\~ao \'e constante. As equa\c{c}\~oes acima tem solu\c{c}\~ao no limite em que $t\to \infty$. Consideramos que $s(t\to \infty)\equiv s_{\infty}=0$, $r(t \to \infty)\equiv r_{\infty}$ e consequentemente $i(t\to \infty)=1-r_{\infty}$. Dividindo a equa\c{c}\~ao (\ref{eq:spr-hmh}) por (\ref{eq:ign-hmh}) e usando a equa\c{c}\~ao (\ref{eq:DK-vin}), temos:
+
+\begin{equation}
+\frac{ds}{di}=-1+\frac{\alpha}{\lambda}\frac{1-i}{i},
+\end{equation}
+integrando de $[t_0, t]$, 
+\begin{equation}
+s(t)-s(t_0)=-\left(1+\frac{\alpha}{\lambda}\right)(i(t)-i(t_0)+\frac{\alpha}{\lambda}\ln\left(\frac{i(t)}{i(t_0)}\right)
+\end{equation}
+tomanto o limite de $t\to\infty$, $t_0\to 0$ e de $n\gg 1$
+
+\begin{equation}
+\ln(1-r_{\infty})=-\frac{\lambda}{\alpha}\left(1+\frac{\alpha}{\lambda}\right)r_{\infty}\Rightarrow r_{\infty}=1-e^{-\beta r_{\infty}},
+\end{equation}
+onde $\beta=1+\lambda/\alpha$.
+
+\section{Resultado n\'umericos}
+
+
+
+
+
+\end{document}
